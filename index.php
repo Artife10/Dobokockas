@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Dobokockas oldal</h1>
     <?php 
     session_start();
     $_SESSION['id'];
@@ -29,6 +30,9 @@
     </form>
 
     <p>Use sql to clear it ty</p>
+    <br>
+    <br>
+    <a href="https://github.com/Artife10/Dobokockas" target="_blank">GITHUB</a>
 
 
 
