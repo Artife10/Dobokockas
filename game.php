@@ -42,6 +42,8 @@
             $plwon = 0;
         }
 
+        
+
         $sql = "INSERT INTO jatekok (ID, name, ai_num, pl_num, won) VALUES (".$tableid.",'".$name."', ".$ainum.",". $plnum.",". $plwon.");";
         $_SESSION['id'] += 1;
         $conn->query($sql);
@@ -56,6 +58,21 @@
 
     <h1>AI number:</h1>
     <p><?php echo $ainum; ?></p>
+
+    <?php
+          
+        if ($ainum == $plnum) {
+            echo"<h2>Tie</h2>";
+        }
+        else{
+            if ($ainum > $plnum) {
+                 echo"<h2>Loss</h2>";
+            }
+            else{
+            echo"<h2>Win</h2>";
+            }
+        }
+    ?>
 
     <form method="post">
         <button type="submit">Roll</button>
